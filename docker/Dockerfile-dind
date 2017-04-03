@@ -1,0 +1,7 @@
+FROM docker:dind
+
+RUN wget -qO packer.zip https://releases.hashicorp.com/packer/0.12.3/packer_0.12.3_linux_amd64.zip?_ga=1.78078932.192291467.1490782265 && \
+    unzip packer.zip && \
+    chmod +x packer && \
+    mv packer /bin && \
+    rm -rf packer.zip
